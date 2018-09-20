@@ -9,6 +9,9 @@ import java.io.PrintStream;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+/**
+ * Unit test for simple App
+ */
 public class AppTest{
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
