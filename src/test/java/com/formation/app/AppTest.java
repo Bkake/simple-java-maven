@@ -9,16 +9,18 @@ import java.io.PrintStream;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-public class AppTest {
+public class AppTest{
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
-    public void setUpStreams() {
+    public void setUpStreams()
+    {
         System.setOut(new PrintStream(outContent));
     }
 
     @Test
-    public void testAppConstructor() {
+    public void testAppConstructor()
+    {
         try {
             new App();
         } catch (Exception e) {
@@ -27,7 +29,8 @@ public class AppTest {
     }
 
     @Test
-    public void testAppMain(){
+    public void testAppMain()
+    {
         App.main(null);
         try {
             assertEquals("Hello World!" + System.getProperty("line.separator"), outContent.toString());
