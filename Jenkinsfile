@@ -4,10 +4,9 @@ pipeline {
      maven 'localMaven'
    }
    stages{
-      stage ('Init'){
+      stage ('Build'){
          steps{
-            echo 'Initializing...'
-            sh 'mvn --version'
+            sh 'mvn -B -DskipTests clean package'
          }
       }
    }
