@@ -1,14 +1,14 @@
 pipeline {
    agent any
    tools {
-     localMaven
+     maven 'localMaven'
    }
-   stages {
+   stages{
       stage ('Init'){
-        steps{
-          echo 'Initializing...'
-          sh 'mvn --version'
-        }
+         steps{
+            echo 'Initializing...'
+            sh 'mvn --version'
+         }
       }
    }
 }
